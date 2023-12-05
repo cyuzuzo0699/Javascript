@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // <!-- <input type="text" name="" id="myId">
+    // <button onclick="console.log(document.getElementById('myId').value)">Get Text</button> -->
+    // let start = confirm("Start?");
+//  start ? alert("Here we go!") : console.log("Aborted");
+//  let start = confirm("Start?");
+//  let message = start ? "Here we go!" : "Aborted";
+//  alert(message);
+let gate = prompt("Choose gate: a, b, or c");
+ let win = false;
+switch (gate) {
+   case "a":
+    alert("Gate A: empty");
+     break;
+     case "b":
+      alert("Gate B: main prize");
+     win = true;
+     break;
+     case "c":
+     alert("Gate C: empty");
+     break;
+    default:
+      alert("No gate " + String(gate));
+}
+ if (win) {
+    alert("Winner!");
+ }
+
+</script>
+
+</body>
+</html>

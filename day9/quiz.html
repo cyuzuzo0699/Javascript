@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i = prompt("enter first number");
+        let sign = prompt("choose between these operators +, -, / or *");
+        let j = prompt("enter second number");
+        
+        
+        switch(sign){
+            case "+":
+               let sum = i + j;
+                alert('sum' + i + ' and ' + j  + ' is ' + sum);
+                break;
+                case "-":
+               let sub = i - j;
+                alert(sub);
+                break;
+                case "/":
+               let div = i / j;
+                alert(div);
+                break;
+                case "*":
+               let mult = i * j;
+                alert(mult);
+                break;
+                if(i === NaN && j === NaN){
+                    alert('NaN');
+                }
+                default:
+                    alert("invalid operator");
+        }
+        
+
+        
+    </script>
+</body>
+</html>
