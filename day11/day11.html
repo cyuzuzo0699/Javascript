@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// let isOver = false;
+//  let counter = 1;
+//  while (!isOver) {
+//      isOver = confirm(`[${counter++}] Continue the loop?`);
+//  }
+let movies = [];
+
+while (true) {
+
+let title = prompt("Enter movie title");
+
+let rating = prompt("Enter movie rating (imdb)");
+
+if (title === null || rating === null) { break }
+
+else { movies.push({ title: title, rating: Number(rating) });
+
+} }
+
+console.log("All with ratings under 7:");
+
+for (movie of movies) {
+
+if (movie.rating < 7) {
+
+console.log('${movie.title} (${movie.rating})');
+
+} }
+
+console.log("All with ratings over 7:");
+
+for (movie of movies) {
+
+if (movie.rating >= 7) {
+
+console.log('${movie.title} (${movie.rating})');
+
+break;
+
+}
+
+}
+
+ 
+</script>
+</body>
+</html>

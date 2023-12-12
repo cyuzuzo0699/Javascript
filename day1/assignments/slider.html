@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Slider</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .testimonial-slider {
+            width: 300px;
+            overflow: hidden;
+        }
+
+        .slides-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .testimonial-content {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-author {
+            margin-top: 10px;
+            font-style: italic;
+            color: #777;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 600px) {
+            .testimonial-slider {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="testimonial-slider">
+        <div class="slides-container">
+            <div class="slide">
+                <div class="testimonial-content">
+                    <p>Never Give Up</p>
+                    <p class="testimonial-author">Yvette Cyuzuzo</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="testimonial-content">
+                    <p>Kurya n kare</p>
+                    <p class="testimonial-author">Chersana Uwumugisha</p>
+                </div>
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle slider functionality
+        var slidesContainer = document.querySelector('.slides-container');
+        var slideWidth = document.querySelector('.slide').offsetWidth;
+
+        function nextSlide() {
+            slidesContainer.style.transform = 'translateX(' + (-slideWidth) + 'px)';
+        }
+
+        // Call nextSlide() after a delay (you can customize the delay)
+        setTimeout(nextSlide, 3000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+    <script>
+        function isPrime(number) {
+            if (number <= 1) {
+                return false;
+            }
+
+            for (var i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function findAndDisplayPrimes() {
+            var primes = [];
+
+            for (var i = 0; i <= 200; i++) {
+                if (isPrime(i)) {
+                    primes.push(i);
+                }
+            }
+
+            alert('Prime numbers in the range 0 to 200:\n\n' + primes.join(', '));
+        }
+    </script>
+</head>
+<body style="background-color: aquamarine;">
+    <h1>Prime Numbers</h1>
+    <button onclick="findAndDisplayPrimes()">Find Prime Numbers</button>
+</body>
+</html>

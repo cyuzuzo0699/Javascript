@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+        }
+        @media screen and (max-width: 768px) {
+            #sidebar {
+                transform: translateX(-100%);
+            }
+
+        #sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #menu-toggle {
+            cursor: pointer;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #sidebar img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #sidebar li {
+            margin-bottom: 15px;
+        }
+
+        #content {
+            flex: ;
+            padding: 20px;
+            display: flex;
+            box-sizing: border-box;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            #sidebar {
+                transform: translateX(-100%);
+            }
+
+            #content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <div id="menu-toggle">&#9776;</div>
+        <img src="coffe.png" alt="Profile Image">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <h1>Main Content Area</h1>
+        <p>This is the main content area. You can add your page content here.</p>
+    </div>
+
+    <script>
+        var sidebar = document.getElementById('sidebar');
+        var menuToggle = document.getElementById('menu-toggle');
+
+        menuToggle.addEventListener('click', function() {
+            sidebar.style.transform = sidebar.style.transform === 'translateX(0px)' ? 'translateX(-100%)' : 'translateX(0px)';
+        });
+    </script>
+</body>
+</html>

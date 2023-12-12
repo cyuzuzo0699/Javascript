@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculator</title>
+    <script>
+        function calculateCircleArea() {
+            var radius = prompt('Enter the radius of the circle:');
+            var parsedRadius = parseFloat(radius);
+
+            if (isNaN(parsedRadius) || parsedRadius <= 0) {
+                alert('Please enter a valid positive number for the radius.');
+                return;
+            }
+
+            var circleArea = Math.PI * Math.pow(parsedRadius, 2);
+            alert('The area of the circle with radius ' + parsedRadius + ' is: ' + circleArea.toFixed(2));
+        }
+
+        function calculateRectangleArea() {
+            var length = prompt('Enter the length of the rectangle:');
+            var width = prompt('Enter the width of the rectangle:');
+
+            var parsedLength = parseFloat(length);
+            var parsedWidth = parseFloat(width);
+
+            if (isNaN(parsedLength) || isNaN(parsedWidth) || parsedLength <= 0 || parsedWidth <= 0) {
+                alert('Please enter valid positive numbers for the length and width.');
+                return;
+            }
+
+            var rectangleArea = parsedLength * parsedWidth;
+            alert('The area of the rectangle with length ' + parsedLength + ' and width ' + parsedWidth + ' is: ' + rectangleArea.toFixed(2));
+        }
+    </script>
+</head>
+<body style="background-color: aquamarine;">
+    <h1>Area Calculator</h1>
+    <button onclick="calculateCircleArea()">Calculate Circle Area</button>
+    <button onclick="calculateRectangleArea()">Calculate Rectangle Area</button>
+</body>
+</html>

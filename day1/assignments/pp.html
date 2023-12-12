@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            position: relative;
+            background: url('background-image.jpg') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        .grid-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .grid-container p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer</p>
+    </header>
+
+    <div class="grid-container">
+        <img src="profile-image.jpg" alt="Profile Image">
+        <div>
+            <h2>About Me</h2>
+            <p>
+                Welcome to my portfolio! I am a passionate web developer with experience in creating modern and responsive web applications.
+                ...
+            </p>
+            <p>
+                Feel free to explore my work and get in touch if you have any inquiries or collaboration opportunities.
+            </p>
+        </div>
+    </div>
+
+    <!-- Add more sections for Portfolio, Skills, etc. -->
+
+    <footer>
+        &copy; 2023 Your Name. All rights reserved.
+    </footer>
+</body>
+</html>

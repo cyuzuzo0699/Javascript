@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatic Dialog Closure</title>
+</head>
+<body>
+
+  <button onclick="showConfirmation()">Access Sign-up Page</button>
+  <script>
+    function showConfirmation() {
+      window.setTimeout(function () {
+        var isUserRegistered = confirm("Do you have an account?");
+
+        if (isUserRegistered) {
+          window.location.href = "login.html";
+        } else {
+          window.location.href = "signup.html";
+        }
+      },3000);
+    }
+  </script>
+
+</body>
+</html>

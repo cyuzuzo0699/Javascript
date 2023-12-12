@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Close Alert</title>
+</head>
+<body>
+    <script>
+        function autoCloseAlert(message, delay) {
+            setTimeout(function() {
+                alert(message);
+                window.close(); 
+        }
+
+     usage: autoCloseAlert('This alert will close automatically.', 3000);
+    </script>
+    <h1>Auto-Close Alert Example</h1>
+    <p>Check the console for an example usage.</p>
+</body>
+</html>

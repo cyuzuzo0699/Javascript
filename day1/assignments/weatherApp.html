@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #weather-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #city-input {
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        #get-weather-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        #weather-info {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="weather-container">
+        <label for="city-input">Enter City:</label>
+        <input type="text" id="city-input" placeholder="City name">
+        <button id="get-weather-btn">Get Weather</button>
+        <div id="weather-info"></div>
+    </div>
+
+    <script>
+        document.getElementById('get-weather-btn').addEventListener('click', function() {
+            var city = document.getElementById('city-input').value;
+
+            if (!city) {
+                alert('Please enter a city name.');
+                return;
+            }
+
+            // Replace 'YOUR_API_KEY' with your actual API key from OpenWeatherMap
+            var apiKey = 'YOUR_API_KEY';
+            var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    var temperature = data.main.temp - 273.15; // Convert temperature to Celsius
+                    var weatherDescription = data.weather[0].description;
+
+                    var weatherInfo = `Current Temperature: ${temperature.toFixed(2)}°C<br>`;
+                    weatherInfo += `Weather Description: ${weatherDescription}`;
+
+                    document.getElementById('weather-info').innerHTML = weatherInfo;
+                })
+                .catch(error => {
+                    alert('Error fetching weather data. Please try again.');
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+</body>
+</html>

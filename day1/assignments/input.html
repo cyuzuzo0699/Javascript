@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Message Printer</title>
+  <style>
+    body {
+      text-align: center;
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="messageInput">Enter Message:</label>
+  <input type="text" id="messageInput">
+  <button onclick="printAndReset()">Submit</button>
+
+  <script>
+    function printAndReset() {
+      
+      var message = document.getElementById('messageInput').value;
+
+      console.log("Entered Message: " + message);
+      document.getElementById('messageInput').value = '';
+    }
+  </script>
+
+</body>
+</html>
