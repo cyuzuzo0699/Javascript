@@ -9,7 +9,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color:#f4f4f4;
+            background-color:#faf7f7;
             color: #333;
         }
 
@@ -67,7 +67,22 @@
             width:100%;
             border-radius: 0px;
             height: 100vh;
-        }{}
+        }
+        .grid_container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 0px;
+            box-sizing: border-box;
+            height:50vh;
+            width: 50vh;
+           
+    
+            
+        }
+        .grid_container h2 p{
+        margin-left: 200px;
+        }
 
         /* .smeadi{
             margin-top: 400;
@@ -79,6 +94,14 @@
         .grid-container p {
             font-size: 1.2em;
             line-height: 1.6;
+        }
+        /* .description{
+          
+      margin-left: 200px;
+        margin-top: 15px;
+        } */
+        .resume p{
+            margin-left: 50px;
         }
         rectangle {
             background-color: #3498db; /* Blue color, you can change this */
@@ -137,7 +160,7 @@
     </header>
 <div>
     <div class="grid-container">
-        <div style="margin-left: 20px;margin-top: 300px;background-color: lavenderblush;" >
+        <div class="description" style="margin-left: 20px;margin-top: 300px;background-color: lavenderblush; border-radius: 20px;" >
             <h2><b>Hello It’s  me</b></h2>
             <p>
                 <b style="color: red;">Eng.</b> Cyuzuzo Yvette
@@ -146,6 +169,7 @@
             A FrontEnd Developer
             </p>
             <p>A Creative and knowledgeable person, education in Computer Engineering.</p>
+            <i class="fa-brands fa-square-instagram fa-beat fa-2xs" style="color: #0a0a0a;"></i>
         </div>
         
         <img src="rr_page-0001 (1).jpg" alt="Profile Image">
@@ -198,7 +222,7 @@ Knowledge Skills: ▪ Event planning and organizing
         <h1 style="text-align: center; color: white";>SERVICES</h1>
     
     
-        <div class="grid-container">
+        <div class="grid_container">
             <div class="rectangle" style="background-color: #585555;">
                 <h2>Web Development</h2>
                 
@@ -263,6 +287,7 @@ Knowledge Skills: ▪ Event planning and organizing
    </div>
 </div>
     <footer>
+        <i class="fa-brands fa-linkedin fa-2xs" style="color: #141414;"></i>
         &copy; 2023 Cyuzuzo Yvette. All rights reserved.
     </footer>
 </body>
